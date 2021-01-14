@@ -71,7 +71,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-header{
+header {
   padding-bottom: 100px;
 }
 .header_title {
@@ -82,7 +82,6 @@ header{
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
-  line-height: 65px;
   color: #000000;
 }
 .header_title p {
@@ -90,7 +89,6 @@ header{
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
-  line-height: 130%;
   /* or 31px */
   color: #000000;
   margin-top: 50px;
@@ -106,22 +104,22 @@ header{
   padding-top: 88px;
   position: relative;
   padding-bottom: 40px;
-  .swiperPrev{
+  .swiperPrev {
     z-index: 3;
     top: 100%;
     left: 113px;
-    &::after{
-      content: url('../assets/images/prev.png');
+    &::after {
+      content: url("../assets/images/prev.png");
       font-size: 0px;
     }
   }
-  .swiperNext{
+  .swiperNext {
     z-index: 3;
     left: 175px;
     right: auto;
     top: 100%;
-    &::after{
-      content: url('../assets/images/next.svg');
+    &::after {
+      content: url("../assets/images/next.svg");
       font-size: 0px;
     }
   }
@@ -150,8 +148,8 @@ header{
     height: auto;
     text-align: center;
     font-weight: bold;
+    width: 100%;
     // font-size: $font-size-huge * 2;
-    background-color: #2c8dfb;
     background-position: center;
     background-size: cover;
     color: white;
@@ -161,9 +159,63 @@ header{
     }
   }
 }
-@media (max-width:1904px) {
+@media (max-width: 1904px) {
   .swiper_wrapper::after {
     display: none;
+  }
+}
+@media (max-width: 1263px) {
+  .header_title h1 {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    /* line-height: 65px; */
+    color: #000000;
+  }
+  .header_title p {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    color: #000000;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .header_title .btnDep {
+    padding: 20px 40px !important;
+    height: auto !important;
+    font-weight: 600 !important;
+    font-size: 20px !important;
+  }
+}
+@media (max-width: 959px) {
+  .header_title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+  }
+}
+// @media (max-width:600px) {
+//   .swiper {
+//   .swiper-slide {
+//     width: 100%;
+//     img {
+//       max-width: 100%;
+//       height: auto;
+//     }
+//   }
+// }
+// }
+@media (max-width: 600px) {
+  .header_title .btnDep {
+    padding: 20px 30px !important;
+    height: auto !important;
+    font-weight: 600 !important;
+    font-size: 20px !important;
   }
 }
 </style>

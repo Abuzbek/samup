@@ -75,10 +75,10 @@ p::after {
   position: absolute;
   top: -10px;
   left: 0;
-  content: '';
+  content: "";
   display: block;
   width: 160px;
   height: 2px;
-  background:#FEDA1B;
-  }
+  background: #feda1b;
+}
 </style>

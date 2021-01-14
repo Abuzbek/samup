@@ -1,11 +1,15 @@
 <template>
-  <section>
+  <section id="client">
     <h2>Mijozlarimiz</h2>
     <v-container>
       <v-row>
-        <swiper>
-          <swiper-slide class="d-flex flex-column justify-center" v-for="n in clients" :key="n">
-            <img :src="l.img" v-for="l in n.one" :key="l"  alt="">
+        <swiper :options="swiperOption">
+          <swiper-slide
+            class="d-flex flex-column justify-center"
+            v-for="n in clients"
+            :key="n"
+          >
+            <img :src="l.img" v-for="l in n.one" :key="l" alt="" />
           </swiper-slide>
         </swiper>
       </v-row>
@@ -25,9 +29,14 @@ export default {
       slidesPerView: 5,
       spaceBetween: 10,
       autoplay: {
+        enabled: true,
         delay: 2000,
       },
       breakpoints: {
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
         640: {
           slidesPerView: 2,
           spaceBetween: 20,
@@ -155,8 +164,8 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
-section {
+<style lang="scss">
+section#client {
   padding-top: 60px;
   padding-bottom: 100px;
   background: linear-gradient(85.61deg, #ffd176 -4.18%, #fff3b3 100%);
@@ -167,6 +176,13 @@ section {
     line-height: 42px;
     text-align: center;
     color: #000000;
+  }
+  .swiper-wrapper {
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 15px 0;
+    }
   }
 }
 </style>

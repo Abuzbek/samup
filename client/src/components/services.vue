@@ -60,20 +60,20 @@ export default {
         title: "Glubokiy pechat xizmati",
       },
     ],
-    plus:[
+    plus: [
       {
-        img:img,
-        class:'plusone'
+        img: img,
+        class: "plusone",
       },
       {
-        img:img,
-        class:'plustwo'
+        img: img,
+        class: "plustwo",
       },
       {
-        img:img,
-        class:'plusthree'
-      }
-    ]
+        img: img,
+        class: "plusthree",
+      },
+    ],
   }),
 };
 </script>
@@ -104,21 +104,21 @@ h3 {
   line-height: 130%;
   text-align: center;
 }
-img.plusone{
+img.plusone {
   position: absolute;
   left: 0;
   top: 50%;
   z-index: 2;
   transform: translateY(-50%);
 }
-img.plustwo{
+img.plustwo {
   position: absolute;
   left: 0;
   top: 50%;
   z-index: 2;
   transform: translateY(-50%);
 }
-img.plusthree{
+img.plusthree {
   position: absolute;
   left: 0;
   top: 50%;
